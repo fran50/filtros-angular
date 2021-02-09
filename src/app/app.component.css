@@ -1,0 +1,43 @@
+.active{
+    /* background-color:blue; */
+    padding: 0.25em 0.5em;
+    border:2px solid blue;
+    border-radius: 2em;
+
+}
+.active a{
+    color:blue;
+}
+.pagination{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border:1px solid blue;
+    border-radius: 0.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    
+}
+li{
+    list-style: none;
+}
+/*
+To implement the pagination and filter system, I used these:
+
+filteredItems attribute: is an array of ‘Product’ used to stock the result of the search process executed by ‘FilterByName’ function.
+pageSize attribute : indicate the number of entries per page,
+pages : is a maximum of Page numbers that can be displayed in pagination bar (it’s the size of ‘pagesIndex’ array).
+pageNumber attribute : is the maximum number of page can we deduce from the ‘ProductList’ in terms of ‘pageSize’ value,
+currentIndex attribute : is the index of the current selected page,
+items attribute : the content of selected page,
+pagesIndex attribute : have the series of numbers shown in the pagination bar.
+pageStart attribute : this the start index page in the pagination bar.
+inputName attribute : is used to search a new list of Product which the value of the attribute name for each one contains the text in ‘inputName’ .
+Constructor method : initialize the ‘filterditems’ from ‘ProductList’, and the pagination.
+Init method : used to calculate the pagination values, and update the view screen.
+FilterByName method : this function return a list of Products which the text in ‘inputName’ is a substring of the Product name. The result will be inserted in ‘filteredItems’ List.
+refreshItems method : refresh the content of table depending mainly on values of the following attributes : ‘currentIndex’ , ‘pageSize’ , 'pages' and 'pageStart' .
+prevPage method : this function will decrease the selected page index (‘currentIndex’) by one, and will refresh the display.
+nextPage method : this function will increase the selected page index (‘currentIndex’) by one, and will refresh the display.
+setPage method : invoked when user select a number from pagination. It will modify the ‘currentIndex’ value and refresh the view.
+*/
